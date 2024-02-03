@@ -13,14 +13,22 @@ function SpicyFoodList() {
     <li key={food.id}>
       {food.name} | Heat: {food.heatLevel} | Cuisine: {food.cuisine}
     </li>
-  ));
+  )); 
 
   return (
     <div>
       <button onClick={handleAddFood}>Add New Food</button>
       <ul>{foodList}</ul>
+      <select name="filter">
+     <option value="All">All</option>
+     <option value="American">American</option>
+     <option value="Sichuan">Sichuan</option>
+     <option value="Thai">Thai</option>
+     <option value="Mexican">Mexican</option>
+      </select>
     </div>
   );
 }
+
 
 export default SpicyFoodList;
